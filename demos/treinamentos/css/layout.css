@@ -1,0 +1,16 @@
+html,body{margin:0;padding:0;min-height:0}body{overflow-x:hidden}#appShell[hidden]{display:none!important}#appShell:not([hidden]){display:flex;flex-direction:column;width:100%;min-height:100vh;min-height:100dvh}#content{display:block;flex:1 0 auto;min-height:0}.site-footer{flex:0 0 auto;margin-top:auto}.content-wrap{height:auto;min-height:0}.page-header[hidden]{display:none!important}
+@supports(height:100dvh){#appShell:not([hidden]){min-height:100dvh}}
+@media(max-width:650px){#appShell:not([hidden]){min-height:100svh}.content-wrap{padding-bottom:2rem}.site-footer{margin-top:auto}}
+.entity-number{width:34px!important;height:34px!important;min-width:34px!important;min-height:34px!important;flex:0 0 34px!important;aspect-ratio:1/1}.entity-card-head h3{min-width:0;overflow-wrap:anywhere;word-break:break-word;line-height:1.3}.entity-card-head .icon-actions{flex:0 0 auto;margin-left:auto}
+.content-wrap.home-page{padding-top:56px;padding-bottom:72px}
+.home-page .hero{margin-bottom:30px}
+.home-page .feature-grid{margin-top:0;gap:28px}
+.home-page .feature{padding:28px}
+.home-page .preferences-panel,.home-page .panel{margin-top:30px!important}
+.site-logo.site-logo-portal{width:auto!important;min-width:0;height:40px;padding:0 16px;white-space:nowrap;line-height:1.1;text-align:center}
+.profile-card{grid-template-columns:1fr!important;align-items:start!important;gap:18px!important}
+.profile-card .profile-details{align-self:start}
+.preferences-panel{margin-top:22px!important}
+@media(max-width:650px){.content-wrap.home-page{padding-top:34px;padding-bottom:48px}.home-page .hero{margin-bottom:22px}.home-page .feature-grid{gap:18px}.home-page .feature{padding:20px}.site-logo.site-logo-portal{height:38px;padding:0 12px;font-size:12px}}
+
+#entityGrid{align-items:stretch}.entity-card{display:flex;flex-direction:column;height:100%}.entity-card .entity-info{flex:1}.entity-card .entity-footer{margin-top:auto}.course-admin-card .entity-info{padding-top:12px;padding-bottom:12px}.course-admin-card .info-row{align-items:center;min-height:43px}.course-admin-card .info-row strong{max-width:62%;overflow-wrap:anywhere}.course-admin-card .mini-action{flex:0 0 auto}.course-admin-card .entity-footer{display:grid;gap:10px}.course-admin-card .report-button{margin-top:0}.course-questions-button{background:#245ea9!important}@media(max-width:650px){.course-admin-card .info-row{gap:10px}.course-admin-card .info-row strong{max-width:58%}}

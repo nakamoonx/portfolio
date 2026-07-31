@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tabatha Nakajima | Desenvolvedora Web &amp; UX/UI Designer</title>
+  <meta name="description" content="Portfólio de Tabatha Nakajima, Desenvolvedora Web e UX/UI Designer. Sites, portais e aplicações com HTML, CSS, JavaScript e Microsoft Power Platform."/>
+  <meta name="author" content="Tabatha Nakajima"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#E8897A"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="pt_BR"/>
+  <meta property="og:title" content="Tabatha Nakajima | Desenvolvedora Web e UX/UI Designer"/>
+  <meta property="og:description" content="Crio sites, portais e aplicações que unem desenvolvimento, usabilidade e identidade visual."/>
+  <meta property="og:image" content="img/Portal-Treinamentos.webp"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav id="nav">
+    <button class="nav-logo" type="button" onclick="goHome()" aria-label="Voltar ao início">Tabatha Nakajima</button>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><button type="button" onclick="goSection('projetos')">Projetos</button></li>
+      <li><button type="button" onclick="goSection('servicos')">Serviços</button></li>
+      <li><button type="button" onclick="goSection('sobre')">Sobre mim</button></li>
+      <li><button type="button" onclick="goSection('contato')">Contato</button></li>
+    </ul>
+    <button class="nav-back" type="button" onclick="goHome()">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/>
+      </svg>
+      Voltar ao portfólio
+    </button>
+  </nav>
+
+  <div id="view-home" class="view active">
+    <section class="hero">
+      <div class="hero-text">
+        <span class="hero-kicker">Desenvolvedora Web &amp; UX/UI Designer</span>
+        <h1>Transformo ideias em<br><em>produtos digitais.</em></h1>
+        <p>Projeto e desenvolvo sites, portais e aplicações responsivas, unindo código, usabilidade e identidade visual — da ideia à interface funcionando.</p>
+        <div class="hero-actions">
+          <button class="btn btn-p" onclick="goSection('projetos')">Conhecer projetos</button>
+          <a class="btn btn-o" href="mailto:tabathanakajima@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio">Falar sobre um projeto</a>
+        </div>
+        <div class="hero-tags">
+          <span class="tag">Power Platform</span><span class="tag">Power Pages</span><span class="tag">HTML</span><span class="tag">CSS</span>
+          <span class="tag">JavaScript</span><span class="tag">UX/UI</span>
+        </div>
+      </div>
+      <div class="hero-badge"><span>Design que<br>também vira<br>produto ✨</span></div>
+    </section>
+
+    <main>
+      <section class="section" id="projetos">
+        <div class="section-header">
+          <div class="sbar"></div><h2>Case em destaque</h2><span class="scount">Power Pages</span>
+        </div>
+        <article class="card featured-card">
+          <div class="card-thumb">
+            <span class="cbadge">Case principal</span>
+            <img src="img/Portal-Treinamentos.webp" alt="Portal corporativo de treinamentos desenvolvido por Tabatha Nakajima" fetchpriority="high" decoding="async">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Portal Corporativo de Treinamentos</div>
+            <div class="card-desc">Case completo de UX/UI e desenvolvimento de um portal que centraliza cursos, avaliações, colaboradores, acessos e certificados.</div>
+            <div class="pills"><span class="pill">Power Pages</span><span class="pill">Dataverse</span><span class="pill">Power Automate</span><span class="pill">UX/UI</span></div>
+            <button class="btn btn-p" onclick="openProject('controle-provas')">Explorar o case</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="sites">
+        <div class="section-header">
+          <div class="sbar"></div><h2>Sites, portais &amp; produtos digitais</h2><span class="scount">2 projetos</span>
+        </div>
+        <div class="grid">
+          <a class="card" onclick="openProject('controle-provas')">
+            <div class="card-thumb"><span class="cbadge">Power Pages</span><img src="img/Portal-Treinamentos.webp" alt="Tela inicial do portal de treinamentos" loading="lazy" decoding="async"></div>
+            <div class="card-body"><div class="card-title">Portal de Treinamentos</div><div class="card-desc">Desenvolvimento de portal corporativo com cursos, avaliações, acessos e certificados.</div><div class="pills"><span class="pill">Power Pages</span><span class="pill">Dataverse</span><span class="pill">Power Automate</span></div></div>
+          </a>
+          <a class="card" onclick="openProject('campanhas')">
+            <div class="card-thumb"><span class="cbadge">UX/UI</span><img src="img/Dispara-gestao-de-campanha.webp" alt="Interface de uma plataforma de gestão de campanhas" loading="lazy" decoding="async"></div>
+            <div class="card-body"><div class="card-title">Gestão de Campanhas</div><div class="card-desc">Experiência completa para criar, segmentar, programar e acompanhar campanhas digitais.</div><div class="pills"><span class="pill">Figma</span><span class="pill">UX/UI</span><span class="pill">Prototipação</span></div></div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section" id="servicos">
+        <div class="section-header"><div class="sbar"></div><h2>Como posso ajudar</h2></div>
+        <div class="services-grid">
+          <article class="service-card"><span class="service-number">01</span><h3>Desenvolvimento web</h3><p>Sites e interfaces responsivas com HTML, CSS e JavaScript, pensadas para funcionar bem em diferentes dispositivos.</p></article>
+          <article class="service-card"><span class="service-number">02</span><h3>Portais em Power Pages</h3><p>Portais corporativos conectados ao ecossistema Microsoft, com foco em fluxos claros, autonomia e experiência do usuário.</p></article>
+          <article class="service-card"><span class="service-number">03</span><h3>UX/UI &amp; prototipação</h3><p>Estrutura, fluxos e interfaces no Figma para transformar necessidades de negócio em produtos simples de usar.</p></article>
+          <article class="service-card"><span class="service-number">04</span><h3>Design para sistemas</h3><p>Interfaces e composições visuais para aplicativos, dashboards e sistemas internos.</p></article>
+          <article class="service-card"><span class="service-number">05</span><h3>Identidade visual</h3><p>Logotipos, paletas e materiais gráficos que dão consistência e personalidade à marca.</p></article>
+          <article class="service-card"><span class="service-number">06</span><h3>Aprimoramento de interfaces</h3><p>Revisão visual e de usabilidade para tornar produtos existentes mais claros, modernos e coerentes.</p></article>
+        </div>
+      </section>
+
+      <section class="section" id="design">
+        <div class="section-header">
+          <div class="sbar"></div><h2>Identidade visual &amp; design gráfico</h2><span class="scount">2 projetos</span>
+        </div>
+        <div class="grid">
+          <a class="card" onclick="openProject('nust')">
+            <div class="card-thumb">
+              <span class="cbadge">Identidade Visual</span>
+              <img src="img/Nust-cover.png" alt="NUST">
+            </div>
+            <div class="card-body">
+              <div class="card-title">NUST</div>
+              <div class="card-desc">Identidade visual, etiquetas, cartão de visita e social media completo.</div>
+              <div class="pills"><span class="pill">Illustrator</span><span class="pill">Branding</span></div>
+            </div>
+          </a>
+          <a class="card" onclick="openProject('mereco')">
+            <div class="card-thumb">
+              <span class="cbadge">Branding</span>
+              <img src="img/Mereco-um-doce-cover.png" alt="Mereço um Doce">
+            </div>
+            <div class="card-body">
+              <div class="card-title">Mereço um Doce</div>
+              <div class="card-desc">Identidade visual e materiais gráficos para confeitaria artesanal.</div>
+              <div class="pills"><span class="pill">Illustrator</span><span class="pill">Social Media</span></div>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="section" id="dashboards">
+        <div class="section-header">
+          <div class="sbar"></div><h2>Interfaces &amp; visualização de dados</h2><span class="scount">2 projetos</span>
+        </div>
+        <div class="grid">
+          <a class="card" onclick="openProject('fundos-dashboards')">
+            <div class="card-thumb">
+              <img src="img/Capas/fundos-para-dashboards.webp" alt="Fundos para Dashboards">
+              <span class="cbadge">Direção Visual</span>
+              <div class="ph-icon"><svg fill="none" stroke="#E8897A" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 21h18M3.75 3h16.5M4.5 3v18M19.5 3v18"/></svg><span>Imagem em breve</span></div>
+            </div>
+            <div class="card-body">
+              <div class="card-title">Fundos para Dashboards</div>
+              <div class="card-desc">Coleção anonimizada de backgrounds e composições visuais para dashboards.</div>
+              <div class="pills"><span class="pill">Figma</span><span class="pill">UI Design</span><span class="pill">Direção Visual</span></div>
+            </div>
+          </a>
+          <a class="card" onclick="openProject('dashboard-treinamentos')">
+            <div class="card-thumb">
+              <img src="img/Capas/dashboard-de-treinamentos.webp" alt="Dashboard de Treinamentos">
+              <span class="cbadge">Mockup Completo</span>
+              <div class="ph-icon"><svg fill="none" stroke="#E8897A" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 21h18M3.75 3h16.5M4.5 3v18M19.5 3v18"/></svg><span>Imagem em breve</span></div>
+            </div>
+            <div class="card-body">
+              <div class="card-title">Dashboard de Treinamentos</div>
+              <div class="card-desc">Mockup completo para acompanhamento de cursos, conclusões, colaboradores, departamentos e pendências.</div>
+              <div class="pills"><span class="pill">Figma</span><span class="pill">UX/UI</span><span class="pill">Data Visualization</span></div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section" id="fundos-apps" hidden>
+        <div class="section-header">
+          <div class="sbar"></div><h2>Design para aplicativos &amp; sistemas</h2><span class="scount">1 projeto</span>
+        </div>
+        <div class="grid">
+          <a class="card" onclick="openProject('fundos-aplicativos-sistemas')">
+            <div class="card-thumb">
+              <img src="img/Capas/fundos-para-aplicativos-e-sistemas.webp" alt="Fundos para Aplicativos e Sistemas">
+              <span class="cbadge">Power Apps</span>
+              <div class="ph-icon"><svg fill="none" stroke="#E8897A" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 21h18M3.75 3h16.5M4.5 3v18M19.5 3v18"/></svg><span>Imagem em breve</span></div>
+            </div>
+            <div class="card-body">
+              <div class="card-title">Fundos para Aplicativos e Sistemas</div>
+              <div class="card-desc">Coleção de fundos mobile e horizontais preparados para receber componentes no Power Apps.</div>
+              <div class="pills"><span class="pill">Figma</span><span class="pill">UI Design</span><span class="pill">Power Apps</span></div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+
+      <section class="section" id="sobre">
+        <div class="section-header">
+          <div class="sbar"></div><h2>Sobre mim</h2>
+        </div>
+        <div class="about-wrap">
+          <div class="about-photo">
+            <img src="img/eooii.jpeg" alt="Tabatha Nakajima, Desenvolvedora Web e UX/UI Designer" loading="lazy" decoding="async">
+          </div>
+          <div class="about-text">
+            <h3>Olá, eu sou<br><em style="color:var(--salmon);font-family:'Cormorant Garamond',serif;font-size:2.2rem;">Tabatha</em> 👋</h3>
+            <p>Sou Desenvolvedora Web e UX/UI Designer. Crio sites, portais e aplicações que unem tecnologia, usabilidade e uma identidade visual consistente. Atuo desde a compreensão da necessidade e o desenho da experiência até o desenvolvimento da interface.</p>
+            <p>Tenho experiência com HTML, CSS, JavaScript e Microsoft Power Pages, além do ecossistema Power Platform. Também desenvolvo identidades visuais e materiais gráficos, o que me permite olhar para o produto digital como um todo: marca, experiência e implementação.</p>
+            <p>Meu objetivo é transformar necessidades de negócio em soluções claras, intuitivas e funcionais — para os usuários e para as empresas.</p>
+            <div class="skill-grid">
+              <span class="sk">Figma</span><span class="sk">Adobe Illustrator</span><span class="sk">Adobe Photoshop</span>
+              <span class="sk">Power Pages</span><span class="sk">Power Apps</span><span class="sk">Power Automate</span>
+              <span class="sk">Dataverse</span><span class="sk">HTML</span><span class="sk">CSS</span><span class="sk">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="contact-bar" id="contato">
+        <div>
+          <h3>Tem um projeto em mente? <em>Vamos conversar.</em></h3>
+          <p>Disponível para projetos freelance e oportunidades em desenvolvimento web, UX/UI e Microsoft Power Platform.</p>
+        </div>
+        <div class="cbtns">
+          <a class="btn btn-o" href="https://www.linkedin.com/in/tabathanakajima/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn-p" href="mailto:tabathanakajima@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio">Enviar e-mail</a>
+        </div>
+      </div>
+    </main>
+    <footer>© <span class="current-year"></span> Tabatha Nakajima — Todos os direitos reservados</footer>
+  </div>
+
+  <div id="view-project" class="view">
+    <div id="proj-content"></div>
+    <footer>© <span class="current-year"></span> Tabatha Nakajima — Todos os direitos reservados</footer>
+  </div>
+
+  <div id="proto-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-bar">
+      <span id="modal-title">Protótipo</span>
+      <div class="modal-acts">
+        <a id="modal-ext" href="#" target="_blank" rel="noopener noreferrer">Abrir em nova aba ↗</a>
+        <button id="modal-close" type="button" onclick="closeModal()" aria-label="Fechar demonstração">✕</button>
+      </div>
+    </div>
+    <div id="modal-device"></div>
+  </div>
+
+  <div id="image-modal" role="dialog" aria-modal="true" aria-labelledby="image-modal-title">
+    <div class="image-modal-inner">
+      <div class="image-modal-bar">
+        <span id="image-modal-title">Imagem do projeto</span>
+        <button id="image-modal-close" type="button" onclick="closeImage()" aria-label="Fechar imagem">✕</button>
+      </div>
+      <img id="image-modal-img" src="" alt="">
+    </div>
+  </div>
+
+  <button class="btt" id="btt" type="button" aria-label="Voltar ao topo">
+    <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"/>
+    </svg>
+  </button>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
