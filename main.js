@@ -60,13 +60,14 @@ const P = {
     'campanhas': {
       title: 'Gestão de Campanhas', subtitle: 'Criação, Segmentação & Disparos',
       cat: 'Sites', type: 'proto-desktop',
-      url: 'demos/campanhas/index.html',
+      url: '#',
       desc: 'Criação do mockup e da experiência visual de uma plataforma para criar, segmentar, programar e acompanhar campanhas digitais. A demonstração navegável foi produzida apenas para apresentar o fluxo desenhado no Figma.',
       problem: 'O fluxo de criação e disparo de campanhas reunia muitas etapas e precisava reduzir dúvidas e retrabalho.',
       solution: 'Mapeei a jornada e desenhei uma interface progressiva para configuração, segmentação, revisão e acompanhamento.',
       result: 'Um protótipo navegável que torna o processo mais previsível e facilita a validação da solução antes do desenvolvimento.',
       tools: ['Figma','UX/UI'],
       ctaLabel: 'Visualizar Mockup Navegável', ctaNote: 'Demonstração criada para apresentar o mockup e seus fluxos',
+      showCta: false,
       device: 'desktop',
       delivs: [
         { label: 'Tela de Login',       img: 'img/Gestao-de-campanhas/login.webp' },
