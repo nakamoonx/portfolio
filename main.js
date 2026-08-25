@@ -313,3 +313,40 @@ const P = {
     });
   }
   observeCards();
+
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async e => {
+      e.preventDefault();
+      const status = document.getElementById('contact-status');
+      const button = document.getElementById('contact-submit');
+      const data = new FormData(contactForm);
+
+      button.disabled = true;
+      button.textContent = 'Enviando...';
+
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          status.textContent = 'Mensagem enviada! Vou te responder em breve. 🌸';
+          status.className = 'contact-status success';
+          status.hidden = false;
+          contactForm.reset();
+        } else {
+          throw new Error('Falha no envio');
+        }
+      } catch {
+        status.textContent = 'Algo deu errado. Tenta de novo ou me chama pelo LinkedIn.';
+        status.className = 'contact-status error';
+        status.hidden = false;
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Enviar mensagem';
+      }
+    });
+  }
