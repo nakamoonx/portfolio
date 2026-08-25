@@ -179,6 +179,19 @@
     .contact-bar h3 em { font-style: italic; color: var(--salmon); }
     .contact-bar p { margin-top: 6px; font-size: .84rem; color: var(--ink-soft); font-weight: 300; }
     .cbtns { display: flex; gap: 12px; flex-shrink: 0; }
+
+    .contact-form { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 420px; }
+    .contact-form input,
+    .contact-form textarea { font-family: 'DM Sans', sans-serif; font-size: .85rem; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--cream); color: var(--ink); resize: vertical; transition: border-color .2s; }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color: var(--ink-soft); opacity: .7; }
+    .contact-form input:focus,
+    .contact-form textarea:focus { outline: none; border-color: var(--salmon); background: var(--white); }
+    .contact-status { font-size: .8rem; font-weight: 300; margin-top: 2px; }
+    .contact-status.success { color: #3E7A54; }
+    .contact-status.error { color: #B4483A; }
+    #contact-submit:disabled { opacity: .6; cursor: not-allowed; }
+
     .services-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
     .service-card { padding: 26px; border-radius: 16px; border: 1px solid var(--border); background: var(--white); box-shadow: var(--cs); }
     .service-number { color: var(--salmon); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; }
